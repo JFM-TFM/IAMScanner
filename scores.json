@@ -1,0 +1,54 @@
+{
+    "contexts": {
+        "management": 1.00,
+        "production": 0.90,
+        "development": 0.50,
+        "sandbox": 0.25
+    },
+    "actions": {
+        "privilegedServices":[
+            "iam",
+            "organizations",
+            "account"
+        ],
+        "privileged": {
+            "Permissions management": 1.00,
+            "Sensitive": 0.95,
+            "Write": 0.90,
+            "Read": 0.80,
+            "List": 0.80,
+            "Tagging": 0.10
+        },
+        "nonPrivileged": {
+            "Permissions management": 0.95,
+            "Sensitive": 0.90,
+            "Write": 0.80,
+            "Read": 0.50,
+            "List": 0.50,
+            "Tagging": 0.10
+        },
+        "exceptions": {
+            "sts": {
+                "AssumeRoot": 1.00,
+                "AssumeRole": 0.98,
+                "AssumeRoleWithSAML": 0.98,
+                "AssumeRoleWithWebIdentity": 0.98
+            },
+            "iam": {
+                "PassRole": 1.00,
+                "CreateServiceLinkedRole": 1.00,
+                "SimulatePrincipalPolicy": 0.90,
+                "SimulateCustomPolicy": 0.90
+            }
+        }
+    },
+    "scope": {
+        "all:no": 1.00,
+        "all:yes": 0.80,
+        "some:no": 0.80,
+        "some:yes": 0.50,
+        "few:no": 0.25,
+        "few:yes": 0.10,
+        "none": 0.00
+    }
+}
