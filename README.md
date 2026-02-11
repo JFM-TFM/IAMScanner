@@ -1,2 +1,2 @@
 # IAMScanner
-Scanner of AWS IAM Credentials
+Scanner of AWS IAM Credentials and risk scoring
